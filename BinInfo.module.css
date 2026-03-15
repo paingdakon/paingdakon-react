@@ -1,0 +1,74 @@
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color .15s;
+}
+
+.panel:hover { border-color: var(--border2); }
+
+.head {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .08em;
+  color: var(--text2);
+}
+
+.body { padding: 16px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+}
+
+@media(max-width: 380px) { .grid { grid-template-columns: 1fr; } }
+
+.row { display: flex; flex-direction: column; gap: 3px; }
+
+.key {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; text-transform: uppercase;
+  letter-spacing: .1em; color: var(--muted);
+}
+
+.val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; color: var(--text);
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px; font-weight: 500;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: .05em;
+}
+
+.visa       { background:#1f6feb22; color:#58a6ff; border:1px solid #1f6feb44 }
+.mastercard { background:#da363322; color:#f85149; border:1px solid #da363344 }
+.amex       { background:#1f7a8822; color:#39d0d8; border:1px solid #1f7a8844 }
+.discover   { background:#9e6a0322; color:#e3b341; border:1px solid #9e6a0344 }
+.jcb        { background:#2ea04322; color:#3fb950; border:1px solid #2ea04344 }
+.diners     { background:#6e768122; color:#8b949e; border:1px solid #6e768144 }
+.unionpay   { background:#b62a2222; color:#ff7b72; border:1px solid #b62a2244 }
+.maestro    { background:#6e408022; color:#c084fc; border:1px solid #6e408044 }
+.mir        { background:#1a3a7a22; color:#6699ff; border:1px solid #1a3a7a44 }
+.rupay      { background:#7a1a1a22; color:#ff9966; border:1px solid #7a1a1a44 }
+.unknown    { background:#30363d22; color:#6e7681; border:1px solid #30363d44 }
+
+.spinner {
+  display: inline-block;
+  width: 12px; height: 12px;
+  border: 2px solid var(--border2);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin .6s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
